@@ -4,19 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 <body>
     <header>
-
+        <div class="jumbotron jumbotron-fluid translucent-1 text-white box-shadow-1">
+            <div class="container">
+              <h1 class="display-2">Weather Dashboard</h1>
+              <p class="lead" id='date'></p>
+            </div>
+          </div>
     </header>
-    <main>
+    <main class='container'>
+        <div class='row translucent-2 box-shadow-1 text-white'>
+            <aside class='col'>
+                <h2>Search for a city:</h2>
+                <p>Search Box</p>
+                <button>Search</button>
+                <hr>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </aside>
+            <content class='col'>
+                <div class='row'>
+                    <h2><span id='city-date'>City - Date</span></h2>            
+                </div>
+                <div class='row'>
+                    <ul>
+                        <li>Temp: </li>
+                        <li>Wind: </li>
+                        <li>Humidity: </li>
+                        <li>UV Index: </li>
+                    </ul>
+                </div>
+                <div class='row'>
+                    <div class='col card box-shadow-1'>
+                        <div class='row card-image'></div>
+                        <div class='row card-title'>Monday</div>
+                        <div class='row card-stats'>
+                            <div class='card-stat-1'></div>
+                            <div class='card-stat-2'></div>
+                            <div class='card-stat-3'></div>
+                        </div>
 
-    </main>
-    <footer>
+                    </div>
+                
+                </div>
+            </content>
+        </div>
         
-    </footer>
+    </main>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src='assets/js/script.js'></script>
 </html>

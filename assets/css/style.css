@@ -3,3 +3,47 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-image: url('../images/background-image.jpg');
+    background-size: cover;
+}
+
+.translucent-1 {
+    background-color: rgba(245, 245, 245, 0.13);
+}
+
+.translucent-2 {
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+.box-shadow-1 {
+    border: .5px solid rgba(0, 0, 0, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+
+hr {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: .2px solid rgba(255, 255, 255, 0.377);
+    width: 80%;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.897);
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+
+@media screen and (max-width: 576px) {
+    .container {
+        flex-direction: column;
+    }
+}
