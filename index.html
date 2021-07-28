@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
     <header>
-        <div class="jumbotron jumbotron-fluid translucent-1 text-white box-shadow-1">
+        <div id='header' class="jumbotron jumbotron-fluid translucent-1 text-white box-shadow-1">
             <div class="container">
-              <h1 class="display-2">Weather Dashboard</h1>
+              <h1 class="display-4">Weather Dashboard</h1>
               <p class="lead" id='date'></p>
             </div>
           </div>
     </header>
     <main class='container'>
-        <div class='row translucent-2 box-shadow-1 text-white'>
-            <aside class='col'>
+        <div id='main-container' class='row translucent-2 box-shadow-1 text-white'>
+            <aside class='col-3 d-flex flex-column'>
                 <h2>Search for a city:</h2>
-                <p>Search Box</p>
-                <button>Search</button>
+                <form>
+                    <input id='city-input'>
+                    <button>Search</button>
+                </form>
                 <hr>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div id='search-history' class="list-group text-white">
+                    <button type="button" class="list-group-item list-group-item-action translucent-3">A second item</button>
+                    <button type="button" class="list-group-item list-group-item-action translucent-3">A third button item</button>
+                    <button type="button" class="list-group-item list-group-item-action translucent-3">A fourth button item</button>
+                    <button type="button" class="list-group-item list-group-item-action translucent-3">A third button item</button>
+                    <button type="button" class="list-group-item list-group-item-action translucent-3">A fourth button item</button>
+                  </div>
             </aside>
-            <content class='col'>
+            <content class='col-9'>
                 <div class='row'>
                     <h2><span id='city-date'>City - Date</span></h2>            
                 </div>
@@ -48,13 +55,48 @@
                         <div class='row card-image'></div>
                         <div class='row card-title'>Monday</div>
                         <div class='row card-stats'>
+                            <div class='card-stat-1'>1223</div>
+                            <div class='card-stat-2'>123123</div>
+                            <div class='card-stat-3'>123123</div>
+                        </div>
+                    </div>
+                    
+                    <div class='col card box-shadow-1'>
+                        <div class='row card-image'></div>
+                        <div class='row card-title'>Monday</div>
+                        <div class='row card-stats'>
                             <div class='card-stat-1'></div>
                             <div class='card-stat-2'></div>
                             <div class='card-stat-3'></div>
                         </div>
-
                     </div>
-                
+                    <div class='col card box-shadow-1'>
+                        <div class='row card-image'></div>
+                        <div class='row card-title'>Monday</div>
+                        <div class='row card-stats'>
+                            <div class='card-stat-1'></div>
+                            <div class='card-stat-2'></div>
+                            <div class='card-stat-3'></div>
+                        </div>
+                    </div>
+                    <div class='col card box-shadow-1'>
+                        <div class='row card-image'></div>
+                        <div class='row card-title'>Monday</div>
+                        <div class='row card-stats'>
+                            <div class='card-stat-1'></div>
+                            <div class='card-stat-2'></div>
+                            <div class='card-stat-3'></div>
+                        </div>
+                    </div>
+                    <div class='col card box-shadow-1'>
+                        <div class='row card-image'></div>
+                        <div class='row card-title'>Monday</div>
+                        <div class='row card-stats'>
+                            <div class='card-stat-1'></div>
+                            <div class='card-stat-2'></div>
+                            <div class='card-stat-3'></div>
+                        </div>
+                    </div>
                 </div>
             </content>
         </div>
@@ -63,5 +105,6 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src='assets/js/script.js'></script>
 </html>
