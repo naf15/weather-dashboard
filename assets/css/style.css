@@ -20,6 +20,7 @@ body {
 
 #main-container {
     padding: 20px;
+    width: 80%;
 }
 
 #search-history {
@@ -56,7 +57,8 @@ hr {
 }
 
 .card {
-    height: 200px;
+    height: 260px;
+    width: 200px;
     margin: 10px;
     display: flex;
     border-radius: 15px;
@@ -89,7 +91,7 @@ hr {
    align-items: center;
    margin: 0; 
    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(201, 190, 190));
-   font-weight: bolder;
+   font-weight: 300;
 }
 
 .card-stats {
@@ -131,12 +133,14 @@ hr {
 .type {
     text-transform: uppercase;
     font-size: xx-small;
+    font-weight: 100;
     margin-bottom: 8px;
 }
 
 .value {
     font-size: large;
     margin-bottom: 0;
+    font-weight: 300;
     margin-top: 5px;
 }
 
