@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 body {
@@ -55,7 +56,7 @@ hr {
 }
 
 .card {
-    height: 250px;
+    height: 200px;
     margin: 10px;
     display: flex;
     border-radius: 15px;
@@ -63,25 +64,80 @@ hr {
     text-align: center;
     flex-wrap: wrap;
     font-weight: bold;
-    color: black;;
+    color: black;
+    padding: 0;
+    border: none;
 }
 
 .card-image {
     background-image: url('../images/background-image.jpg');
     background-size: cover;
     height: 50%;
+    margin-left: 0;
+    margin-right: 0; 
     
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    /* padding: 0;   */
     
 }
 
 .card-title {
    height: 20%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0; 
+   background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(201, 190, 190));
+   font-weight: bolder;
 }
 
 .card-stats {
-    display: flex;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 30%;
+   background-image: linear-gradient(to bottom right, rgba(214, 86, 35, 0.945), rgba(255, 115, 0, 0.931));
+   margin-right: 0; 
+   margin-left: 0;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   color: white;
+}
+
+.card-stats .stat-1 {
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 33%;
+}
+
+.card-stats .stat-2 {
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 33%;
+    border-left :rgba(255, 255, 255, 0.897) solid .5px;
+    border-right :rgba(255, 255, 255, 0.897) solid .5px;
+}
+
+.card-stats .stat-3 {
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 33%;
+}
+
+.type {
+    text-transform: uppercase;
+    font-size: xx-small;
+    margin-bottom: 8px;
+}
+
+.value {
+    font-size: large;
+    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 li {
