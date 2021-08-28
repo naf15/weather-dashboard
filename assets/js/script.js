@@ -18,7 +18,8 @@ DATA
 =====================*/
 var cityName = '';
 var searchHistory = [];
-var todaysDate = moment().format('MMM Do, YYYY');
+var todaysDateMoment = moment();
+var todaysDate = todaysDateMoment.format('MMM Do, YYYY');
 var defaultCity = 'New York City';
 var lat = 0;
 var lon = 0;
@@ -31,8 +32,7 @@ var temperature = '';
 var windSpeeds = '';
 var humidity = '';
 var uvIndex = ''; 
-var fiveDayStartDate = moment();
-var fiveDatStartDay = moment().day();
+var fiveDatStartDay = todaysDateMoment.day();
 var daysOfTheWeek = {
   1: 'Monday',
   2: 'Tuesday',
@@ -108,6 +108,8 @@ async function getFiveDayWeather(cityName) {
     })
     .then(function(data) {
       var hourStepSize = 24/3;
+      var fiveDayStartDate = moment();
+      
       for (var i=0; i<data.list.length; i++) {
         var dayStats = data.list[i*hourStepSize];
 
@@ -122,8 +124,13 @@ async function getFiveDayWeather(cityName) {
         $(`#day-${i+1}-stat-1-value`).text(dayStats.main.temp.toString().slice(0,4));
         $(`#day-${i+1}-stat-2-value`).text(dayStats.wind.speed.toString().slice(0,4));
         $(`#day-${i+1}-stat-3-value`).text(dayStats.main.humidity.toString().slice(0,4));
-        
-        // `https://openweathermap.org/img/wn/${dayStats.weather.icon}@2x.png`
+
+        $(`#day-${i+1}-img`).css({
+          'background-image': `url(http://openweathermap.org/img/wn/${dayStats.weather[0].icon}@2x.png)`,
+          'opacity': '.6',
+          'object-fit': 'contain',
+          'vertical-align': 'middle'
+        }); 
       }
     })
 }
@@ -160,6 +167,7 @@ INITIALIZATION
 =====================*/
 
 function init () {
+  todaysDate = moment().format('MMM Do, YYYY');
   getCityInput();
   getGeoLocation(defaultCity);
   getTodaysWeather(defaultCity);

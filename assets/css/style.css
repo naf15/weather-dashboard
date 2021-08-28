@@ -61,8 +61,8 @@ hr {
 }
 
 .card {
-    height: 260px;
-    width: 170px;
+    height: 330px;
+    width: 200px;
     margin: 10px;
     display: flex;
     border-radius: 15px;
@@ -76,7 +76,8 @@ hr {
 }
 
 .card-image {
-    background-image: url('../images/background-image.jpg');
+    /* background-image: url('../images/background-image.jpg'); */
+    background-color: rgba(34, 66, 142, 0.469);
     background-size: cover;
     height: 50%;
     margin-left: 0;
